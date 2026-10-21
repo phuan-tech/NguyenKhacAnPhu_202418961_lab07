@@ -1,3 +1,3 @@
-public class HighestPriorityStrategy {
+public class HighestPriorityStrategy<T> implements ISelectionStrategy<T> {
     
 }

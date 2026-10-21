@@ -13,11 +13,7 @@ public class ProjectorRemote extends TeachingDevice {
 
     @Override 
     public boolean isReadyForUse() {
-        if (this.getStatus() == DeviceStatus.AVAILABLE && this.batteryLevel >= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.getStatus() == DeviceStatus.AVAILABLE && this.batteryLevel >= 20;
     }
 
     @Override 

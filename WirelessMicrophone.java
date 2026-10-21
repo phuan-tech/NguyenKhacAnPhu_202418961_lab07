@@ -21,11 +21,7 @@ public class WirelessMicrophone extends TeachingDevice {
 
     @Override 
     public boolean isReadyForUse() {
-        if (this.getStatus() == DeviceStatus.AVAILABLE && this.batteryLevel >= 30 && this.signalQuality >= 40) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.getStatus() == DeviceStatus.AVAILABLE && this.batteryLevel >= 30 && this.signalQuality >= 40;
     }
 
     @Override 

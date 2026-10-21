@@ -1,3 +1,3 @@
-public class AllocationService {
+public class AllocationService<T extends TeachingDevice> {
     
 }
