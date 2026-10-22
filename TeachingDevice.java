@@ -31,11 +31,11 @@ public abstract class TeachingDevice implements IIdentifiable {
     // Lấy điểm ưu tiên
     public abstract double getDefaultPriorityScore();
 
-    public void Borrow(){
+    public void Borrow() throws DeviceNotReadyException {
         if (this.isReadyForUse()) {
             this.status = DeviceStatus.BORROWED;
         } else {
-            return;
+            throw new DeviceNotReadyException(this.id, this.status);
         }
     };
 

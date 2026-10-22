@@ -5,9 +5,15 @@ import java.util.function.Predicate;
 public class InMemoryRepository<T extends IIdentifiable> implements IRepository<T> {
     private List<T> items = new ArrayList<>();
 
-    public void add(T item) {
+    public void add(T item) throws DuplicateIdException {
         if (item == null) {
             throw new IllegalArgumentException("item không được null");
+        }
+
+        for (T i : this.items) {
+            if (i.getId().equals(item.getId())) {
+                throw new DuplicateIdException(item.getId());
+            }
         }
 
         this.items.add(item);
