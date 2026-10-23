@@ -17,7 +17,7 @@ public class AllocationService<T extends TeachingDevice> {
         this.strategy = newStrategy;
     }
 
-    public T Allocate(Predicate<T> additionalCondition) throws NoSuitableItemException, DeviceNotReadyException{
+    public T allocate(Predicate<T> additionalCondition) throws NoSuitableItemException, DeviceNotReadyException{
         List<T> candidates = this.repository.findAll(additionalCondition);
         T selectItem = strategy.select(candidates);
         selectItem.Borrow();

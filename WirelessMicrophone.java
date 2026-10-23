@@ -37,4 +37,10 @@ public class WirelessMicrophone extends TeachingDevice {
     public int getSignalQuality() {
         return this.signalQuality;
     }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Mức pin: " + this.batteryLevel);
+        System.out.println("Chất lượng tín hiệu: " + this.signalQuality);
+    }
 }

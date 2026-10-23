@@ -66,4 +66,11 @@ public abstract class TeachingDevice implements IIdentifiable {
     protected void setStatus(DeviceStatus status) {
         this.status = status;
     }
+
+    public void displayInfo() {
+        System.out.println("Id: " + this.id);
+        System.out.println("Name: " + this.name);
+        System.out.println("Nơi lưu trữ: " + this.storageLocation);
+        System.out.println("Trạng thái: " + this.status);
+    }
 }

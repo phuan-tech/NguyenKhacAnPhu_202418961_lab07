@@ -36,4 +36,12 @@ public class AirConditionerRemote extends TeachingDevice {
     public List<String> getCompatibleRooms() {
         return Collections.unmodifiableList(this.compatibleRooms);
     }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Danh sách các phòng tương thích: ");
+        for (String room : this.compatibleRooms) {
+            System.out.println(room);
+        }
+    }
 }

@@ -25,4 +25,9 @@ public class ProjectorRemote extends TeachingDevice {
     public int getBatteryLevel() {
         return this.batteryLevel;
     }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Mức pin: " + this.batteryLevel);
+    }
 }
